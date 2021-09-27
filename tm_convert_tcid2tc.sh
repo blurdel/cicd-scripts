@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# This script will read the file containing multiple tomahawk testcases
-# and write a single testcase-id into a file called testcase.tc
-
 me=$(basename $0)
 echo "me=${me} $@"
 
@@ -10,7 +7,7 @@ echo "me=${me} $@"
 rm -f *.tc
 
 # An input file is required
-inputfile="${1:-tomahawk-tcid.txt}"
+inputfile="${1:-tcid.txt}"
 if [ ! -e ${inputfile} ]; then
   echo "${me}: ERROR, input file '${inputfile}' is required, this script will exit ..."
   exit 1
